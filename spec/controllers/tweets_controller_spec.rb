@@ -8,7 +8,7 @@ describe TweetsController do
   end
 
   describe 'GET #edit' do
-    it "render the :edit template" do
+    it "assigns the requested tweet to @tweet" do
       tweet = create(:tweet)
       get :edit, params: {id: tweet}
       expect(assigns(:tweet)).to eq tweet
